@@ -39,6 +39,10 @@ Or if you are off-rails, but use ActiveRecord, just do this in the model class:
 
     include BeReadonly::Now
 
+### Contributors
+
+Thanks to Gabriel Naiman for his patch!
+
 ### License
 
 Copyright (c) 2012 Gary S. Weaver, released under the [MIT license][lic].
