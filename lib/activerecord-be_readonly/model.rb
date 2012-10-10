@@ -2,13 +2,14 @@ module BeReadonly
   module Model
     extend ActiveSupport::Concern
 
-    included do
-    end
-
     module ClassMethods
       def be_readonly
         extend BeReadonlyClassMethods # intentionally not in ClassMethods which is automatically extended via ActiveSupport::Concern
         include BeReadonlyInstanceMethods # intentionally not just InstanceMethods as those would be automatically included via ActiveSupport::Concern
+
+        before_destroy do
+          raise ActiveRecord::ReadOnlyRecord
+        end
       end
     end
 
@@ -25,18 +26,6 @@ module BeReadonly
     module BeReadonlyInstanceMethods
       def readonly?
         return true
-      end
-
-      def before_create
-        raise ActiveRecord::ReadOnlyRecord
-      end
-
-      def before_save
-        raise ActiveRecord::ReadOnlyRecord
-      end
-
-      def before_destroy
-        raise ActiveRecord::ReadOnlyRecord
       end
 
       def delete
