@@ -21,6 +21,10 @@ module BeReadonly
       def delete_all(conditions = nil)
         raise ActiveRecord::ReadOnlyRecord
       end
+
+      def update_all(conditions = nil)
+        raise ActiveRecord::ReadOnlyRecord
+      end
     end
 
     module BeReadonlyInstanceMethods
