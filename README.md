@@ -11,7 +11,7 @@ There are other gems that provide similar behavior, but from what I saw, they di
 
 Adding this gem to you bundle will add a class method called be_readonly on each model when Rails loads via a railtie.
 
-If be_readonly is called on the class, it defines the class methods: delete and delete_all and the instance methods: before_create, before_save, before_destroy, and delete to all raise a ActiveRecord::ReadOnlyRecord error. It also defines the instance method readonly? to return true, which disables a lot that tries to create and update in ActiveRecord.
+If be_readonly is called on the class, it defines the class methods: delete and delete_all and the instance methods: before_create, before_save, before_destroy, update_all, and delete to all raise a ActiveRecord::ReadOnlyRecord error. It also defines the instance method readonly? to return true, which disables a lot that tries to create and update in ActiveRecord.
 
 ### Setup
 
