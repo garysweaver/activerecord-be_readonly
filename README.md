@@ -41,7 +41,10 @@ Or if you are off-rails, but use ActiveRecord, just do this in the model class:
 
 ### Contributors
 
-Thanks to Gabriel Naiman for his patch!
+Thanks to:
+* [vkhater](https://github.com/vkhater)
+* [Gabriel Naiman](https://github.com/gabynaiman)
+* [Gary Weaver](https://github.com/garysweaver)
 
 ### License
 
