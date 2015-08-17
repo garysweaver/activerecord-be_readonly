@@ -39,6 +39,13 @@ Or if you are off-rails, but use ActiveRecord, just do this in the model class:
 
     include BeReadonly::Now
 
+### Configuration
+
+Useful if you'd like to turn off read-only only for tests, etc.
+
+    # application-wide setting. true by default.
+    BeReadonly.enabled = false
+
 ### Contributors
 
 Thanks to:
