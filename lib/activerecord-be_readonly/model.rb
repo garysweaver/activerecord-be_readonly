@@ -32,7 +32,7 @@ module BeReadonly
 
     module BeReadonlyInstanceMethods
       def readonly?
-        return true if BeReadonly.enabled
+        return new_record? ? false : true if BeReadonly.enabled
         super
       end
 
