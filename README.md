@@ -41,10 +41,15 @@ Or if you are off-rails, but use ActiveRecord, just do this in the model class:
 
 ### Configuration
 
-Useful if you'd like to turn off read-only only for tests, etc.
+You can create an initializer (`/config/initializers/activerecord-be_readonly.rb`) with the following options:
 
-    # application-wide setting. true by default.
-    BeReadonly.enabled = false
+To turn off read-only application-wide, set the enabled setting to false (useful if you'd like to turn off read-only only for tests, etc.)
+
+    BeReadonly.enabled = false    # Default: true
+
+To disable read-only for record creation application-wide, set the create_allowed setting to true
+
+    BeReadonly.create_allowed = true    # Default: false
 
 ### Contributors
 
@@ -52,6 +57,7 @@ Thanks to:
 * [vkhater](https://github.com/vkhater)
 * [Gabriel Naiman](https://github.com/gabynaiman)
 * [Gary Weaver](https://github.com/garysweaver)
+* [Kevin Zych](https://github.com/kayzee)
 
 ### License
 
