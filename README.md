@@ -1,4 +1,4 @@
-Be Readonly for ActiveRecord 3.x/4.x and Rails 3.x/4.x
+Be Readonly for ActiveRecord 3.x/4.x/5.x and Rails 3.x/4.x/5.x
 =====
 
 Makes any ActiveRecord model become read-only in Rails with:

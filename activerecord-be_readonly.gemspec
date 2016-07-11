@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
   s.authors     = ['Gary S. Weaver']
   s.email       = ['garysweaver@gmail.com']
   s.homepage    = 'https://github.com/garysweaver/activerecord-be_readonly'
-  s.summary     = %q{Easy read-only models for ActiveRecord 3.x/4.x.}
-  s.description = %q{Makes read-only models easier to implement in ActiveRecord 3.x/4.x.}
+  s.summary     = %q{Easy read-only models for ActiveRecord 3.x/4.x/5.x.}
+  s.description = %q{Makes read-only models easier to implement in ActiveRecord 3.x/4.x/5.x.}
   s.files = Dir['lib/**/*'] + ['Rakefile', 'README.md']
   s.license = 'MIT'
-  s.add_dependency 'activerecord', '>= 3.0', '< 5'
+  s.add_dependency 'activerecord', '>= 3.0', '< 6'
 end
