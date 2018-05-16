@@ -1,3 +1,5 @@
+require 'active_support'
+
 module BeReadonly
   module Now
     extend ActiveSupport::Concern
